@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DeWins — кейсы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="logo" id="logo">
+      <svg width="26" height="30" viewBox="0 0 26 30" aria-hidden="true"><rect x="10" y="19" width="6" height="4" rx="1" fill="#ffcf4d"/><rect x="6" y="23" width="14" height="3" rx="1.4" fill="#ffcf4d"/><path d="M8 4h10v3c0 6-3 11-5 11S8 13 8 7z" fill="#ffcf4d"/><path d="M8 6C3 6 2 9 2 12s2.5 5 6 5" fill="none" stroke="#ffcf4d" stroke-width="2"/><path d="M18 6c5 0 6 3 6 6s-2.5 5-6 5" fill="none" stroke="#ffcf4d" stroke-width="2"/></svg>
+      <span>De<b>Wins</b></span>
+    </div>
+    <nav id="nav">
+      <button data-v="cases">Кейсы</button>
+      <button data-v="upgrade">Апгрейд</button>
+      <button data-v="contract">Контракт</button>
+      <button data-v="inv">Инвентарь</button>
+      <button data-v="bonus">Бонусы</button>
+    </nav>
+    <div class="bal"><span id="bal">0</span><i>DW</i></div>
+    <button class="avbtn" id="avBtn" aria-label="Профиль"></button>
+  </div>
+</header>
+
+<div class="ticker"><div class="wrap" id="ticker"></div></div>
+
+<main class="wrap" id="app"></main>
+
+<footer><div class="wrap">DeWins — демо-версия. Вся валюта (DW) виртуальная: ни пополнения, ни вывода реальных денег здесь нет.</div></footer>
+<div class="toast" id="toast"></div>
+<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gateT">
+  <div class="gate-card">
+    <div class="gate-logo"><svg width="34" height="39" viewBox="0 0 26 30" aria-hidden="true"><rect x="10" y="19" width="6" height="4" rx="1" fill="#ffcf4d"/><rect x="6" y="23" width="14" height="3" rx="1.4" fill="#ffcf4d"/><path d="M8 4h10v3c0 6-3 11-5 11S8 13 8 7z" fill="#ffcf4d"/><path d="M8 6C3 6 2 9 2 12s2.5 5 6 5" fill="none" stroke="#ffcf4d" stroke-width="2"/><path d="M18 6c5 0 6 3 6 6s-2.5 5-6 5" fill="none" stroke="#ffcf4d" stroke-width="2"/></svg><span>De<b>Wins</b></span></div>
+    <h1 id="gateT">Введи ник, чтобы играть</h1>
+    <p>Придумай ник длиннее 3 символов, например Dew_King. Без входа сайт не откроется.</p>
+    <div class="gate-form"><input id="gateIn" placeholder="Твой ник" maxlength="24" autocomplete="off" spellcheck="false"><button class="btn" id="gateGo">Войти и играть</button></div>
+    <div class="gate-err" id="gateErr" role="alert"></div>
+    <small>Демо: ник не проверяется через Steam и хранится только в этом браузере. Пароль от Steam вводить не нужно и нельзя.</small>
+  </div>
+</div>
+<div id="loader" aria-live="polite">
+  <div class="ld-in">
+    <div class="ld-logo"><svg width="46" height="54" viewBox="0 0 26 30" aria-hidden="true"><rect x="10" y="19" width="6" height="4" rx="1" fill="#ffcf4d"/><rect x="6" y="23" width="14" height="3" rx="1.4" fill="#ffcf4d"/><path d="M8 4h10v3c0 6-3 11-5 11S8 13 8 7z" fill="#ffcf4d"/><path d="M8 6C3 6 2 9 2 12s2.5 5 6 5" fill="none" stroke="#ffcf4d" stroke-width="2"/><path d="M18 6c5 0 6 3 6 6s-2.5 5-6 5" fill="none" stroke="#ffcf4d" stroke-width="2"/></svg><span>De<b>Wins</b></span></div>
+    <div class="ld-bar"><i id="lbar"></i></div>
+    <div class="ld-txt" id="ltxt">Заводим рулетку…</div>
+  </div>
+</div>
+
+
+<script src="config.js"></script>
+<script src="promos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
